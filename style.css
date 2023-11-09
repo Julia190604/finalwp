@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e7ebf0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* 100% der Bildschirmhöhe */
+}
+
+header {
+    text-align: center;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    background-color: #f7f8f9;
+}
+
+.logo {
+    margin-right: 1.25em;
+    max-width: 6.25em;
+}
+
+
+
+.info {
+    padding: 0.625em 1.25em;
+    background-color: #c4cdda;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+#hint-text{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 1em;
+}
+
+
+/* Grundlegendes Styling für den umgebenden Container der Suchleiste */
+.search-bar{
+    display: flex;
+    justify-content: column;
+    align-content: center;    margin: 1.25em 0; /* Etwas Abstand oben und unten */
+    padding: 0.313em;
+    background: #efefef; /* Leichte Hintergrundfarbe */
+    border-radius: 1.563em; /* Abgerundete Ecken */
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
+}
+
+/* Styling für das Eingabefeld */
+.search-bar input[type="search"] {
+    padding: 0.625em 1.563em;
+    border: none; /* Entfernt den Standard-Browser-Rahmen */
+    border-radius: 1.563em; /* Abgerundete Ecken */
+    outline: none; /* Entfernt den Fokus-Rahmen */
+    width: 80%;
+  }
+
+
+/* Styling für den Suchbutton */
+.search-bar button.submit {
+    padding: 0.6253em 0.938em;
+    border: none; /* Entfernt den Standard-Browser-Rahmen */
+    background: #596f80; 
+    color: white;
+    cursor: pointer; /* Zeigt den Mauszeiger als Klick-Indikator */
+    border-radius: 1.563em; /* Abgerundete Ecken */
+    margin-left: 1em; 
+  }
+
+  /* Änderungen beim Überfahren des Buttons mit der Maus */
+@media (hover: hover) {
+   .search-bar button.submit:hover {
+     background: #567a7a;
+   }
+}
+ 
+
+/* Anpassungen für größere Bildschirme */
+@media (min-width: 50em) {
+    .search-bar {
+      display: flex;
+      flex-direction: row; /* Horizontales Layout für größere Bildschirme */
+      justify-content: center; /* Zentriert die Suchleiste horizontal */
+      align-items: center; /* Vertikale Zentrierung der Kinder */
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .search-bar button.submit {
+      margin-top: 0; /* Entfernt den vertikalen Abstand */
+      
+    }
+  
+    .search-bar input[type="search"] {
+      width: 100%; /* Nimmt die verfügbare Breite ein */
+    }
+  }
+  
+  
+  /* Zusätzliche Anpassungen für Fokus und Eingabe */
+.search-bar input[type="search"]:focus {
+   box-shadow: 0 0 0 0.125em rgba(0, 123, 255, 0.363); /* Fügt einen blauen Glanz hinzu, wenn fokussiert */
+}
+  
+.search-bar input[type="search"]::placeholder {
+    color: #bbb; /* Ändert die Farbe des Platzhalters */
+}
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    margin-top: auto;
+    /* Automatischer Abstand oben, um den Footer nach unten zu drücken */
+}
+
+
+
+@media (min-width: 50em) {
+    .info {
+        padding: 0.625em 1.25em;
+        background-color: #c4cdda;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+}
+
+
+
+/*Produktansicht + Detailansicht*/
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Das Bild wird als Block-Element gerendert, was bedeutet, dass es seine eigene Zeile hat */
+}
+
+@media (min-width: 30em) {
+    .search-results{
+        display: flex;
+        justify-content: center; 
+        align-items: center;   
+        height: 100vh;           /* Setzt die Höhe des Containers auf die Höhe des Bildschirms */
+
+    }
+    .responsive-image {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle; 
+        margin: auto;           /* Fügt automatische Ränder auf beiden Seiten hinzu, um es horizontal zu zentrieren */
+    }
+    .product-name {
+        display: block; /* Macht aus dem <span> ein Block-Element */
+        text-align: center; /* Zentriert den Text im <span> */
+        width: 100%; /* Ermöglicht es <span>, die volle Breite des Containers einzunehmen */
+    }
+    .product-details {
+        display: flex;
+        justify-content: center; /* Zentriert die Details horizontal */
+        align-items: center; /* Zentriert die Details vertikal, falls notwendig */
+        text-align: center; /* Zentriert den Text innerhalb der Flex-Items */
+        flex-direction: column;
+    }
+
+}

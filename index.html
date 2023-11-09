@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>A-Z-Shop</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <img src="./logo.png" alt="Logo" class="logo">
+        <h1 class="title">A-Z-Shop</h1>
+    </header>
+
+    <div class="content">
+        <div class="info">
+            <span>Kostenlose Lieferung ab 49€</span>
+            <span>Schneller Versand</span>
+            <span>90 Tage Rückgaberecht</span>
+        </div>
+
+        <div id="search-section">
+            <div id="hint-text">
+                Wonach suchen Sie?
+            </div>
+            <div class="search-bar">
+                <input type="search" name="search" id="inputField" pattern=".*\S.*" required>
+                <button class="submit" id="submit" type="button">
+                    Suche
+                </button>
+            </div>
+            <div id="search-results-container" class="scroll-view">
+                <div id="search-results"></div>
+                <div id="content" class="product-details-container">
+                    <!-- Inhalt wird durch JavaScript dynamisch eingefügt -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>AGB - Datenschutz - Impressum - Widerrufsbelehrung</p>
+        <p>Alle Preise inkl. der gesetzl. MwSt.</p>
+        <p>&copy; 2023 A-Z-Shop</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
